@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent overlay */
+    background: rgba(255, 255, 255, 0.301); /* Semi-transparent overlay */
 }
 
 .container {
@@ -24,7 +24,7 @@ body {
     text-align: center; /* Centers the text */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    background-color: #fff; /* White background for the container */
+    background-color: #73c4b3d8; /* White background for the container */
     border-radius: 8px; /* Rounded corners */
 }
 
@@ -33,12 +33,12 @@ body {
 }
 
 h1 {
-    color: #333;
+    color: #000000;
     margin-bottom: 0; /* Removes bottom margin from the title */
 }
 
 p {
-    color: #666;
+    color: #0c0c0c;
     margin-top: 5px; /* Adds a small space above each paragraph */
 }
 
