@@ -17,11 +17,6 @@ body {
     align-items: center;
     background: rgba(255, 255, 255, 0.301); /* Semi-transparent overlay */
 }
-body {
-    
-  }
-  
-
 .container {
     width: 100%; /* Ensures the container spans the full width */
     max-width: 600px; /* Maximum width of the container */
