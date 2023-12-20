@@ -1,0 +1,47 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #33a881; /* Light gray background */
+    background-image: url('pic.png'); /* Path to your background image */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Fixed background */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent overlay */
+}
+
+.container {
+    width: 100%; /* Ensures the container spans the full width */
+    max-width: 600px; /* Maximum width of the container */
+    margin: auto; /* Centers the container in the middle of the page */
+    text-align: center; /* Centers the text */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    background-color: #fff; /* White background for the container */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.info {
+    margin-top: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 0; /* Removes bottom margin from the title */
+}
+
+p {
+    color: #666;
+    margin-top: 5px; /* Adds a small space above each paragraph */
+}
+
+#total-days-left {
+    color: #FF0000; /* Makes the days left count stand out */
+}
