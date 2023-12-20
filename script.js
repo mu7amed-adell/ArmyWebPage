@@ -12,19 +12,22 @@ function updateCountdown() {
     const now = new Date();
     currentDateSpan.textContent = now.toLocaleDateString();
 
+    // Calculate the time until the start date
     const timeUntilStart = startDate - now;
-    const timeLeftInService = endDate - now;
+    // Calculate the time left in service, which should only start counting after the start date
+    const timeLeftInService = now >= startDate ? Math.max(endDate - now, 0) : serviceDuration;
 
-    // Update the days until start and in service only if they are positive
+    // Calculate the days until start and days left in service
     const daysUntilStart = timeUntilStart > 0 ? Math.floor(timeUntilStart / (1000 * 60 * 60 * 24)) : 0;
-    const daysLeftInService = timeLeftInService > 0 ? Math.floor(timeLeftInService / (1000 * 60 * 60 * 24)) : 0;
+    const daysLeftInService = Math.floor(timeLeftInService / (1000 * 60 * 60 * 24));
 
+    // Update the text content for days until start and days left in service
     daysUntilStartSpan.textContent = daysUntilStart;
     daysLeftInServiceSpan.textContent = daysLeftInService;
 
-    // Update the detailed countdown for both periods
-    timeUntilStartSpan.textContent = formatTime(timeUntilStart);
-    serviceTimeCountdownSpan.textContent = formatTime(timeLeftInService);
+    // Update the detailed countdown to start date and service time
+    timeUntilStartSpan.textContent = timeUntilStart > 0 ? formatTime(timeUntilStart) : "Service has started";
+    serviceTimeCountdownSpan.textContent = now >= startDate ? formatTime(timeLeftInService) : "Service countdown begins on 6th Jan 2024";
 }
 
 function formatTime(duration) {
